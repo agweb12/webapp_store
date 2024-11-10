@@ -1,0 +1,953 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap");
+
+:root {
+  --colorprimary: #121212;
+  --colorsecondary: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Geist", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--colorsecondary);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p.description {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: rgba(172, 172, 172);
+}
+
+
+/* NAVIGATION */
+nav {
+  position: fixed;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  border-bottom: 1px solid #cbcbcb;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.421);
+  z-index: 9999;
+}
+
+nav .logo {
+  width: 50px;
+  height: 50px;
+}
+
+nav .box-row {
+  display: flex;
+  width: 50%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul.list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+nav ul.list:hover {
+  filter: blur(0px);
+}
+
+nav li.item {
+  padding: 1rem 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+nav li.item a {
+  text-decoration: none;
+  font-weight: 700;
+  color: #121212;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+nav li.item.active a {
+  color: rgba(28, 123, 255);
+}
+
+nav ul.list:hover li.item:not(:hover) {
+  filter: blur(10px);
+}
+
+nav ul.list li.item:hover a {
+  scale: 112%;
+  color: rgba(28, 123, 255);
+}
+
+nav a.sign {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+}
+
+nav a.sign:hover {
+  scale: 104%;
+  rotate: 2deg;
+}
+
+
+
+/* PRESENTATION */
+.filter {
+  position: relative;
+
+  background: url("../img/slider-left-dec.png"), url("../img/slider-dec.png");
+  background-position: 0% 0%, 85% 60%;
+  background-repeat: no-repeat;
+  background-size: 65%, 41%;
+}
+
+.presentation {
+  width: 100%;
+
+  height: 135vh;
+  margin-bottom: 5rem;
+  transition: all 2s ease-in-out;
+  backdrop-filter: blur(0px);
+}
+
+.presentation h1 {
+  font-size: 3rem;
+  color: var(--colorprimary);
+}
+
+.presentation p {
+  color: var(--colorsecondary);
+  font-size: 1rem;
+}
+
+.presentation .box {
+  position: relative;
+  top: 33%;
+  left: 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 40%;
+  height: fit-content;
+  backdrop-filter: blur(0px);
+  background: rgba(255, 255, 255, 0.055);
+  padding: 1rem 2rem;
+  border-radius: 30px;
+}
+
+.presentation .box .button-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.presentation .box .button-box a {
+  border-radius: 30px;
+  padding: 0.5rem 2rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+}
+
+.presentation .box .button-box a:hover {
+  scale: 104%;
+  rotate: 2deg;
+}
+
+.presentation:has(.box .button-box a:hover) {
+  backdrop-filter: blur(30px);
+}
+
+/* SERVICES */
+.services {
+  height: 80vh;
+  width: 100%;
+  background: url("../img/services-right-dec.png"),
+    url("../img/services-left-dec.png");
+  background-position: 100% 0%, 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 70%, 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 5rem;
+}
+
+.services .title,
+.aboutus .title.leftbox,
+.clients .title,
+.prices .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 2rem;
+  width: 45%;
+}
+
+.services .title h2 span,
+.aboutus .title h2 span,
+.clients .title h2 span,
+.prices .title h2 span {
+  color: rgba(28, 123, 255);
+}
+
+.services .title p.description,
+.aboutus .title p.description,
+.clients .title p.description,
+.prices .title p.description {
+  text-align: center;
+}
+
+.services .title p.description a,
+.aboutus .title p.description a,
+.clients .title p.description a,
+.prices .title p.description a {
+  position: relative;
+  color: rgba(28, 123, 255);
+  font-weight: 400;
+}
+
+.services .title p.description a::after,
+.aboutus .title p.description a::after,
+.clients .title p.description a::after,
+.prices .title p.description a::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(28, 123, 255);
+  bottom: -2px;
+  left: 0px;
+  width: 0%;
+  height: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.services .title p.description a:hover::after,
+.aboutus .title p.description a:hover::after,
+.clients .title p.description a:hover::after,
+.prices .title p.description a:hover::after {
+  width: 100%;
+  height: 2px;
+}
+
+.services .services-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 80%;
+  height: 100%;
+}
+
+.services .services-box .services-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  width: 33%;
+  height: 300px;
+  background: rgb(255, 255, 255);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px 20px 5px 5px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.services .services-box .services-col img {
+  width: 50px;
+  height: 50px;
+}
+
+.services .services-box .services-col h3 {
+  font-size: 1.2rem;
+  text-transform: capitalize;
+}
+
+.services .services-box .services-col p.description {
+  line-height: 2;
+}
+
+.services .services-box .services-col p.description a {
+  position: relative;
+  color: rgba(28, 123, 255);
+  font-weight: 400;
+}
+
+.services .services-box .services-col p.description a::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(28, 123, 255);
+  bottom: -2px;
+  left: 0px;
+  width: 0%;
+  height: 0px;
+  transition: all 0.2s ease-in-out;
+}
+
+.services .services-box .services-col p.description a:hover::after {
+  width: 100%;
+  height: 1px;
+}
+
+.services .services-box .services-col .box-link a {
+  font-weight: 400;
+}
+
+.services .services-box .services-col .box-link {
+  translate: 0px 0px;
+  transition: all 1s ease-in-out;
+}
+
+.services .services-box .services-col .box-link a,
+.services .services-box .services-col .box-link i {
+  color: rgba(28, 123, 255);
+  transition: all 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.2);
+}
+
+.services .services-box .services-col .box-link:hover i {
+  translate: 5px 0px;
+}
+
+.services .services-box .services-col:hover {
+  background: url(../img/service-bg.jpg);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services .services-box .services-col:hover .box-link a,
+.services .services-box .services-col:hover .box-link i,
+.services .services-box .services-col:hover h3,
+.services .services-box .services-col:hover p.description,
+.services .services-box .services-col:hover p.description a {
+  color: var(--colorsecondary);
+}
+
+
+/* ABOUT US */
+.aboutus {
+  height: 110vh;
+  width: 100%;
+  background: url("../img/about-right-dec.png"), url("../img/about-bg.jpg");
+  background-position: 80% 0%, 100% 60%;
+  background-repeat: no-repeat;
+  background-size: 40%, 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.aboutus .title.leftbox {
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0rem 5rem;
+}
+
+.aboutus .title.leftbox p.description {
+  text-align: left;
+  font-weight: 300;
+}
+
+.aboutus .aboutus-boxes {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+  margin-left: 5rem;
+}
+
+.aboutus .aboutus-boxes .aboutus-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  background: rgb(255, 255, 255);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  padding: 1rem;
+  transition: all 0.3s ease-in-out;
+  gap: 1rem;
+}
+
+.aboutus .aboutus-boxes .aboutus-box h3 {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.aboutus .aboutus-boxes .aboutus-box:hover h3 {
+  color: rgba(28, 123, 255);
+}
+
+.aboutus .note {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-left: 5rem;
+}
+
+.aboutus .note p,
+.aboutus .note p.notabene {
+  line-height: 2;
+  width: 70%;
+  font-weight: 200;
+  color: #b1b1b1;
+}
+
+.aboutus .note a {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+}
+
+.aboutus .note a:hover {
+  scale: 104%;
+  rotate: 2deg;
+}
+
+.aboutus .note p.notabene {
+  color: #555555;
+}
+
+
+
+/* CLIENTS */
+.clients {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  overflow: hidden;
+  margin-bottom: 5rem;
+}
+
+.clients::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("../img/slider-left-dec.png");
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: 45%;
+  transform: rotate(360deg);
+  z-index: -10;
+}
+
+.clients .title h2 {
+  text-align: center;
+}
+
+.clients .title p.description {
+  border-radius: 30px;
+  background-color: rgba(255, 255, 255, 0.571);
+  padding: 1rem 2rem;
+}
+
+.clients .clients-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+}
+
+.clients .clients-row .statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 50%;
+}
+
+.clients .clients-row .statistics .clients-statistics {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255);
+  border-radius: 10px;
+  border: 0.03rem solid rgba(0, 0, 0, 0.1);
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+  cursor: pointer;
+}
+
+.clients .clients-row .statistics .clients-statistics::before {
+  position: absolute;
+  content: "";
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 10px;
+  rotate: 1deg;
+  background: linear-gradient(60deg, rgba(28, 123, 255), rgba(101, 211, 255));
+  transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.clients .clients-row .statistics .clients-statistics:hover {
+  background: linear-gradient(60deg,
+      rgba(28, 123, 255, 0.4),
+      rgba(101, 211, 255, 0.4));
+}
+
+.clients .clients-row .statistics .clients-statistics:hover::before {
+  top: 0.5rem;
+  left: 0.5rem;
+  rotate: 3deg;
+}
+
+.clients .clients-row .statistics .clients-statistics .namedate-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.clients .clients-row .statistics .clients-statistics .namedate-box p {
+  color: rgba(122, 122, 122);
+}
+
+.clients .clients-row .statistics .clients-statistics .type-clients h4 {
+  color: rgba(122, 122, 122);
+}
+
+.clients .clients-row .statistics .clients-statistics .note-avis {
+  color: rgba(122, 122, 122);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.clients .clients-row .statistics .clients-statistics:hover .namedate-box,
+.clients .clients-row .statistics .clients-statistics:hover .namedate-box p,
+.clients .clients-row .statistics .clients-statistics:hover .type-clients h4,
+.clients .clients-row .statistics .clients-statistics:hover .note-avis {
+  color: white;
+}
+
+
+/* QUOTES */
+.quote-presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.quote-presentation .quotes,
+.quote-presentation .presentations {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.quote-presentation .quotes .quote-client {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 75%;
+  padding: 3rem;
+  height: 45vh;
+  border-radius: 20px;
+  background: url("../img/client-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0% 0%;
+}
+
+.quote-presentation .quotes .quote-client.visible {
+  display: flex;
+}
+
+.quote-presentation .quotes .quote-client img {
+  width: 70px;
+  height: 70px;
+}
+
+.quote-presentation .quotes .quote-client blockquote {
+  color: white;
+  font-style: italic;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.quote-presentation .presentations .clients-presentation {
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 30vh;
+  border-radius: 50% 10px 10px 50%;
+  background: linear-gradient(60deg, rgba(255, 255, 255), rgba(101, 211, 255));
+}
+
+.quote-presentation .presentations .clients-presentation.visible {
+  display: flex;
+}
+
+.quote-presentation .presentations .clients-presentation.visible .client-image {
+  width: 50%;
+  height: 100%;
+  /* border-radius: 50px; */
+}
+
+.quote-presentation .presentations .clients-presentation.visible .client-image img {
+  width: 30vh;
+  height: 30vh;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.quote-presentation .presentations .clients-presentation.visible .client-details {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  color: rgb(52, 52, 52);
+}
+
+
+/* PRICES */
+.prices {
+  height: 100%;
+  width: 100%;
+  background: url("../img/slider-dec.png");
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  margin-bottom: 5rem;
+}
+
+.prices .title h2 {
+  text-align: center;
+}
+
+.prices .row-offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  gap: 1rem;
+}
+
+.prices .row-offers .col-offers1,
+.prices .row-offers .col-offers2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  border-radius: 3rem;
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  gap: 2rem;
+  box-shadow: 0px 0px 12px rgba(130, 130, 130, 0.23);
+}
+
+.prices .row-offers .col-offers1 {
+  background: url("../img/pro-table-top.png"),
+    url("../img/pro-table-bottom.png");
+  background-size: 60%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.prices .row-offers .col-offers2 {
+  background: url("../img/regular-table-top.png"),
+    url("../img/regular-table-bottom.png");
+  background-size: 60%;
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(20Px);
+  height: 80vh;
+}
+
+.prices .row-offers .col-offers1 p.price,
+.prices .row-offers .col-offers2 p.price {
+  position: absolute;
+  font-size: 2.7rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 3px 3px 0px rgba(28, 123, 255);
+  top: 0px;
+  left: 0px;
+  margin: 1rem 0rem 0rem 1rem;
+}
+
+.prices .row-offers .col-offers2 img,
+.prices .row-offers .col-offers1 img {
+  position: relative;
+  width: 7rem;
+  filter: drop-shadow(.1rem .1rem 0rem rgba(28, 123, 255));
+}
+
+.prices .row-offers .col-offers1 .valid p,
+.prices .row-offers .col-offers2 .valid p {
+  color: rgba(28, 123, 255);
+  font-size: .9rem;
+  font-weight: 300;
+}
+
+.prices .row-offers .col-offers1 .invalid p,
+.prices .row-offers .col-offers2 .invalid p {
+  color: rgb(132, 132, 132);
+  font-size: .9rem;
+  font-weight: 300;
+  text-decoration: line-through;
+  text-decoration-color: rgb(132, 132, 132);
+}
+
+.prices .row-offers .col-offers1 .valid,
+.prices .row-offers .col-offers2 .valid,
+.prices .row-offers .col-offers1 .invalid,
+.prices .row-offers .col-offers2 .invalid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+.prices .row-offers .col-offers1 a.abonnetoi,
+.prices .row-offers .col-offers2 a.abonnetoi {
+  text-decoration: none;
+  border-radius: 30px;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 900;
+  color: white;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+}
+
+.prices .row-offers .col-offers1 a.abonnetoi:hover,
+.prices .row-offers .col-offers2 a.abonnetoi:hover {
+  scale: 96%;
+  rotate: 5deg;
+  background: linear-gradient(60deg, rgba(28, 123, 255, 0.463), rgba(101, 211, 255, 0.529)), url("../img/pro-table-top.png");
+}
+
+/* FOOTER */
+footer {
+  height: 150vh;
+  width: 100%;
+  background: url("../img/footer-bg.png");
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 5rem 0rem 0rem 0rem;
+}
+
+
+footer {
+
+  .title {
+    margin: 15rem 0rem 0rem 0rem;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgba(101, 211, 255, 0.2);
+    padding: 1rem;
+    border-radius: 30px;
+
+    h2 {
+      position: relative;
+      color: white;
+      text-align: center;
+
+    }
+
+    h2::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: rgba(28, 123, 255);
+      border-radius: 50px;
+      top: 2px;
+      left: 2px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 3rem;
+      backdrop-filter: blur(10px);
+
+      input.email,
+      input.email::placeholder {
+        outline: none;
+        border: none;
+        border-bottom: 1px solid white;
+        color: white;
+        background-color: transparent;
+        padding: .5rem 0rem;
+        text-align: left;
+        font-size: .9rem;
+        width: 50%;
+        /* background: transparent; */
+      }
+
+      button {
+        outline: none;
+        border: 1px solid white;
+        background-color: transparent;
+        color: white;
+        border-radius: 30px;
+        padding: .5rem 2rem;
+        font-size: 1rem;
+        width: 50%;
+      }
+    }
+  }
+
+  .row-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    width: 80%;
+
+    .boxes1,
+    .boxes2,
+    .boxes3,
+    .boxes4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      width: 25%;
+      height: fit-content;
+      gap: 2rem;
+      color: white;
+      background: rgba(101, 211, 255, 0.1);
+      padding: 1rem;
+      border-radius: 30px;
+      backdrop-filter: blur(4px);
+
+
+      .coordonnees {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .box1,
+      .box2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: .5rem;
+
+        a {
+          font-size: .9rem;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    p {
+      color: white;
+    }
+
+    a {
+      color: white;
+      text-align: center;
+    }
+  }
+}
