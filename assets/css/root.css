@@ -802,8 +802,10 @@ nav a.sign:hover {
 }
 
 /* FOOTER */
+
+
 footer {
-  height: 150vh;
+  height: 100%;
   width: 100%;
   background: url("../img/footer-bg.png");
   background-position: 0% 100%;
@@ -814,11 +816,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 5rem;
-  padding: 5rem 0rem 0rem 0rem;
-}
-
-
-footer {
+  padding: 5rem 0rem 3rem 0rem;
 
   .title {
     margin: 15rem 0rem 0rem 0rem;
@@ -910,7 +908,6 @@ footer {
       padding: 1rem;
       border-radius: 30px;
       backdrop-filter: blur(4px);
-
 
       .coordonnees {
         display: flex;
