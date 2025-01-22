@@ -3,6 +3,11 @@
 :root {
   --colorprimary: #121212;
   --colorsecondary: #ffffff;
+
+  --greycolor: rgb(172, 172, 172);
+
+  --securecolor: rgba(28, 123, 255);
+  --ctacolor: rgb(101, 211, 255);
 }
 
 * {
@@ -26,7 +31,7 @@ h2 {
 p.description {
   font-size: 0.9rem;
   font-weight: 400;
-  color: rgb(172, 172, 172);
+  color: var(--greycolor);
 }
 
 
@@ -39,11 +44,11 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
+  padding: 1rem 2rem;
   border-bottom: 1px solid #cbcbcb;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.421);
-  z-index: 9999;
+  z-index: 1000;
 
   .logo {
     width: 50px;
@@ -52,10 +57,10 @@ nav {
 
   .box-row {
     display: flex;
-    width: 50%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 1rem 2rem;
 
     .list {
       list-style-type: none;
@@ -80,14 +85,14 @@ nav {
         &:hover {
           a {
             scale: 112%;
-            color: rgba(28, 123, 255);
+            color: var(--securecolor);
           }
         }
       }
 
       .item.active {
         a {
-          color: rgba(28, 123, 255);
+          color: var(--securecolor);
         }
       }
 
@@ -100,6 +105,20 @@ nav {
       }
     }
 
+    .menu-aside {
+      display: none;
+      transition: all 0.3s ease-in-out;
+      margin-right: 1rem;
+
+      i {
+        color: white;
+        background: linear-gradient(60deg, var(--securecolor), var(--ctacolor));
+        border-radius: 1rem;
+        padding: .5rem;
+        font-size: 1.5rem;
+      }
+    }
+
     a.sign {
       text-decoration: none;
       border-radius: 30px;
@@ -108,11 +127,74 @@ nav {
       font-weight: 800;
       color: white;
       transition: all 0.3s ease-in-out;
-      background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+      background: linear-gradient(60deg, var(--securecolor), var(--ctacolor));
 
       &:hover {
         scale: 104%;
         rotate: 2deg;
+      }
+    }
+  }
+}
+
+/* ASIDE MENU */
+.aside {
+  position: fixed;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  display: flex;
+  border-left: 1px solid #cbcbcb;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.421);
+  z-index: 2000;
+  transition: all .3s ease-in-out;
+
+  .aside-box {
+    position: absolute;
+    top: 0;
+    right: -200px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+
+    .item {
+      width: 100%;
+      padding: 1rem 1rem;
+      transition: all 0.3s ease-in-out;
+
+      a {
+        text-decoration: none;
+        font-weight: 700;
+        color: #121212;
+        display: inline-block;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        a {
+          scale: 112%;
+          color: var(--securecolor);
+        }
+      }
+    }
+
+    .item.active {
+      a {
+        color: var(--securecolor);
+      }
+    }
+
+    &:hover {
+      filter: blur(0px);
+
+      .item:not(:hover) {
+        filter: blur(10px);
       }
     }
   }
@@ -123,9 +205,9 @@ nav {
   position: relative;
 
   background: url("../img/slider-left-dec.png"), url("../img/slider-dec.png");
-  background-position: 0% 0%, 85% 60%;
+  background-position: 0% 0%, 95% 60%;
   background-repeat: no-repeat;
-  background-size: 65%, 41%;
+  background-size: 90%, 30%;
 
   .presentation {
     width: 100%;
@@ -140,11 +222,11 @@ nav {
       left: 7%;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
-      width: 40%;
+      gap: 1.5rem;
+      width: 50%;
       height: fit-content;
       backdrop-filter: blur(0px);
-      background: rgba(255, 255, 255, 0.055);
+      background: rgba(255, 255, 255, 0.126);
       padding: 1rem 2rem;
       border-radius: 30px;
 
@@ -169,7 +251,7 @@ nav {
           font-weight: 800;
           color: white;
           transition: all 0.3s ease-in-out;
-          background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+          background: linear-gradient(60deg, var(--securecolor), var(--ctacolor));
 
           &:hover {
             scale: 104%;
@@ -202,7 +284,7 @@ nav {
 
     h2 {
       span {
-        color: rgba(28, 123, 255);
+        color: var(--securecolor);
       }
     }
 
@@ -211,13 +293,13 @@ nav {
 
       a {
         position: relative;
-        color: rgba(28, 123, 255);
+        color: var(--securecolor);
         font-weight: 400;
 
         &::after {
           content: "";
           position: absolute;
-          background-color: rgba(28, 123, 255);
+          background-color: var(--securecolor);
           bottom: -2px;
           left: 0px;
           width: 0%;
@@ -236,7 +318,7 @@ nav {
 
 /* SERVICES */
 .services {
-  height: 80vh;
+  height: 100%;
   width: 100%;
   background: url("../img/services-right-dec.png"),
     url("../img/services-left-dec.png");
@@ -252,12 +334,14 @@ nav {
 
   .services-box {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     width: 80%;
     height: 100%;
+    margin-bottom: 5rem;
 
     .services-col {
       display: flex;
@@ -265,8 +349,8 @@ nav {
       justify-content: space-between;
       align-items: flex-start;
       gap: 0.5rem;
-      width: 33%;
-      height: 300px;
+      width: 25%;
+      height: fit-content;
       background: rgb(255, 255, 255);
       background-position: 0% 100%;
       background-repeat: no-repeat;
@@ -291,13 +375,13 @@ nav {
 
         a {
           position: relative;
-          color: rgba(28, 123, 255);
+          color: var(--securecolor);
           font-weight: 400;
 
           &::after {
             content: "";
             position: absolute;
-            background-color: rgba(28, 123, 255);
+            background-color: var(--securecolor);
             bottom: -2px;
             left: 0px;
             width: 0%;
@@ -322,7 +406,7 @@ nav {
 
         a,
         i {
-          color: rgba(28, 123, 255);
+          color: var(--securecolor);
           transition: all 0.7s cubic-bezier(0.755, 0.05, 0.855, 0.2);
         }
 
@@ -363,7 +447,7 @@ nav {
 
 /* À PROPOS DE */
 .aboutus {
-  height: 110vh;
+  height: 100%;
   width: 100%;
   background: url("../img/about-right-dec.png"), url("../img/about-bg.jpg");
   background-position: 80% 0%, 100% 60%;
@@ -419,7 +503,7 @@ nav {
       }
 
       &:hover h3 {
-        color: rgba(28, 123, 255);
+        color: var(--securecolor);
       }
     }
   }
@@ -452,7 +536,7 @@ nav {
       font-weight: 900;
       color: white;
       transition: all 0.3s ease-in-out;
-      background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+      background: linear-gradient(60deg, var(--securecolor), var(--ctacolor));
 
       &:hover {
         scale: 104%;
@@ -512,6 +596,7 @@ nav {
       flex-direction: column;
       gap: 2rem;
       width: 50%;
+      margin-bottom: 5rem;
 
       .clients-statistics {
         position: relative;
@@ -536,7 +621,7 @@ nav {
           left: 1rem;
           border-radius: 10px;
           rotate: 1deg;
-          background: linear-gradient(60deg, rgba(28, 123, 255), rgba(101, 211, 255));
+          background: linear-gradient(60deg, var(--securecolor), var(--ctacolor));
           transition: all 0.2s cubic-bezier(0.39, 0.575, 0.565, 1);
         }
 
@@ -615,7 +700,7 @@ nav {
           border-radius: 20px;
           background: url("../img/client-bg.png");
           background-repeat: no-repeat;
-          background-size: 100%;
+          background-size: 160%;
           background-position: 0% 0%;
 
           img {
@@ -644,7 +729,7 @@ nav {
           width: 80%;
           height: 30vh;
           border-radius: 50% 10px 10px 50%;
-          background: linear-gradient(60deg, rgba(255, 255, 255), rgba(101, 211, 255));
+          background: linear-gradient(60deg, rgba(255, 255, 255), var(--ctacolor));
         }
 
         .clients-presentation.visible {
@@ -726,7 +811,7 @@ nav {
         font-size: 2.7rem;
         font-weight: 900;
         color: white;
-        text-shadow: 3px 3px 0px rgba(28, 123, 255);
+        text-shadow: 3px 3px 0px var(--securecolor);
         top: 0px;
         left: 0px;
         margin: 1rem 0rem 0rem 1rem;
@@ -735,7 +820,7 @@ nav {
       img {
         position: relative;
         width: 7rem;
-        filter: drop-shadow(.1rem .1rem 0rem rgba(28, 123, 255));
+        filter: drop-shadow(.1rem .1rem 0rem var(--securecolor));
       }
 
       .valid,
@@ -749,7 +834,7 @@ nav {
 
       .valid {
         p {
-          color: rgba(28, 123, 255);
+          color: var(--securecolor);
           font-size: .9rem;
           font-weight: 300;
         }
@@ -773,7 +858,7 @@ nav {
         font-weight: 900;
         color: white;
         transition: all 0.3s ease-in-out;
-        background: linear-gradient(60deg, rgba(28, 123, 255), rgb(101, 211, 255));
+        background: linear-gradient(60deg, var(--securecolor), var(--ctacolor));
 
         &:hover {
           scale: 96%;
@@ -789,7 +874,7 @@ nav {
       background-size: 60%;
       background-position: top left, bottom right;
       background-repeat: no-repeat;
-      height: 100vh;
+      height: 120vh;
     }
 
     .col-offers2 {
@@ -799,13 +884,12 @@ nav {
       background-position: top left, bottom right;
       background-repeat: no-repeat;
       backdrop-filter: blur(20Px);
-      height: 80vh;
+      height: 100vh;
     }
   }
 }
 
 /* FOOTER */
-
 footer {
   height: 100%;
   width: 100%;
@@ -816,27 +900,28 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 5rem;
+  justify-content: space-between;
+  gap: 3rem;
   padding: 5rem 0rem 3rem 0rem;
+  transition: all .5s ease-in-out;
 
-  .title {
-    margin: 15rem 0rem 0rem 0rem;
-    width: 45%;
+  .footer-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    background-color: rgba(101, 211, 255, 0.2);
-    padding: 1rem;
-    border-radius: 30px;
+    gap: 2rem;
+    width: 60%;
+    margin: 10rem 0rem 0rem 0rem;
 
     h2 {
       position: relative;
-      color: white;
+      color: var(--colorprimary);
       text-align: center;
 
+      span {
+        color: var(--securecolor);
+      }
     }
 
     h2::after {
@@ -845,11 +930,22 @@ footer {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(28, 123, 255);
       border-radius: 50px;
       top: 2px;
       left: 2px;
     }
+  }
+
+  .title {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgba(28, 123, 255, 0.7);
+    padding: 2rem;
+    border-radius: 30px;
 
     form {
       display: flex;
@@ -864,8 +960,8 @@ footer {
       input.email::placeholder {
         outline: none;
         border: none;
-        border-bottom: 1px solid white;
-        color: white;
+        border-bottom: 1px solid var(--colorsecondary);
+        color: var(--colorsecondary);
         background-color: transparent;
         padding: .5rem 0rem;
         text-align: left;
@@ -874,10 +970,14 @@ footer {
         /* background: transparent; */
       }
 
+      input.email::placeholder {
+        width: 100%;
+      }
+
       button {
         outline: none;
         border: 1px solid white;
-        background-color: transparent;
+        background-color: var(--securecolor);
         color: white;
         border-radius: 30px;
         padding: .5rem 2rem;
@@ -889,8 +989,10 @@ footer {
 
   .row-footer {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-end;
+    /* justify-content: center; */
     gap: 3rem;
     width: 80%;
 
@@ -905,8 +1007,8 @@ footer {
       width: 25%;
       height: fit-content;
       gap: 2rem;
-      color: white;
-      background: rgba(101, 211, 255, 0.1);
+      color: var(--colorsecondary);
+      background: linear-gradient(60deg, rgba(28, 123, 255, 0.2), rgba(101, 211, 255, 0.2));
       padding: 1rem;
       border-radius: 30px;
       backdrop-filter: blur(4px);
@@ -928,8 +1030,17 @@ footer {
         a {
           font-size: .9rem;
           font-weight: 300;
+          color: var(--colorsecondary);
         }
       }
+
+      img {
+        width: 7rem;
+      }
+    }
+
+    .boxes4 {
+      width: 60%;
     }
   }
 
@@ -947,6 +1058,238 @@ footer {
     a {
       color: white;
       text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  nav {
+    padding: 1rem 1rem;
+
+    .logo {
+      width: 9rem;
+      height: 3rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .box-row {
+      padding: 0rem 2rem;
+    }
+  }
+
+  .filter {
+    .presentation {
+      .box {
+        width: 60%;
+      }
+    }
+  }
+
+  .services {
+    .services-box {
+      .services-col {
+        width: 30%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  nav {
+    padding: 1rem 1rem;
+
+    .logo {
+      width: 9rem;
+      height: 3rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .box-row {
+      .list {
+        display: none;
+      }
+
+      .menu-aside {
+        display: block;
+        font-size: 1.5rem;
+        padding: 1rem;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .aside.active {
+    .aside-box {
+      right: 0px;
+    }
+  }
+
+  .filter {
+    .presentation {
+      .box {
+        width: 80%;
+
+        p {
+          color: var(--colorprimary);
+        }
+      }
+    }
+  }
+
+  .services {
+    .services-box {
+      .services-col {
+        width: 45%;
+      }
+    }
+  }
+
+  .clients {
+    .clients-row {
+      flex-wrap: wrap;
+
+      .statistics {
+        width: 90%;
+      }
+
+      .quote-presentation {
+        width: 100%;
+
+        .quote-client {
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .prices {
+    .row-offers {
+      flex-wrap: wrap;
+
+      .col-offers1,
+      .col-offers2 {
+        width: 45%;
+      }
+    }
+  }
+
+  footer {
+    background-size: 275%;
+
+    .footer-box {
+      .title {
+        width: 97%;
+      }
+    }
+
+    .row-footer {
+
+      .boxes1,
+      .boxes2,
+      .boxes3,
+      .boxes4 {
+        width: 45%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .services,
+  .aboutus,
+  .clients,
+  .prices {
+
+    .title,
+    .title.leftbox {
+      width: 90%;
+    }
+  }
+
+  .aboutus {
+
+    .title,
+    .title.leftbox {
+      width: 100%;
+    }
+
+    .aboutus-boxes {
+      width: 70%;
+
+      .aboutus-box {
+        width: 100%;
+      }
+    }
+  }
+
+  .services {
+    .services-box {
+      .services-col {
+        width: 80%;
+      }
+    }
+  }
+
+  .clients {
+    .title {
+      width: 100%;
+    }
+
+    .clients-row {
+      .statistics {
+        .clients-statistics {
+          flex-direction: column;
+          gap: 1rem;
+
+          .type-clients {
+            h4 {
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .prices {
+    .row-offers {
+
+      .col-offers1,
+      .col-offers2 {
+        width: 80%;
+      }
+    }
+  }
+
+  footer {
+    .footer-box {
+      width: 98%;
+
+      .title {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 3px;
+      }
+    }
+
+    .row-footer {
+
+      .boxes1,
+      .boxes2,
+      .boxes3,
+      .boxes4 {
+        width: 100%;
+        background: linear-gradient(60deg, rgba(28, 123, 255, 0.752), rgba(101, 211, 255, 0.752))
+      }
     }
   }
 }
