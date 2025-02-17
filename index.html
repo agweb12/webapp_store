@@ -1,381 +1,438 @@
 <!DOCTYPE html>
 <html lang="fr">
-
+	<!-- Head -->
 	<head>
-		<meta charset="UTF-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta charset="UTF-8"/> <!-- Encodage -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Viewport -->
+
 		<title>Web App Store</title>
 		<meta name="description" content="Web App Store, une application pour télécharger des templates HTML - CSS - Javascript et PHP"/>
+		<!-- Meta Tags -->
+		<meta name="robots" content="index,follow">
+		<meta name="keywords" content="Web App Store, Application, HTML, CSS, Javascript, PHP, Templates, Modèles, Développement, Applications, Web, Entreprises, Particuliers, Déploiement, Apple Store, Play Store">
+		<meta name="author" content="Web App Store">
+		<meta name="application-name" content="Web App Store">
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:title" content="Web App Store" />
+		<meta property="og:description" content="Web App Store, une application pour télécharger des templates HTML - CSS - Javascript et PHP"/>
+		<meta property="og:image" content="https://localhost:5505/assets/img/logo.svg" />
+		<meta property="og:site_name" content="Web App Store"/>
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://localhost:5505" />
+
+		<!-- Twitter -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@webappstore">
+		<meta name="twitter:creator" content="@webappstore">
+		<meta name="twitter:title" content="Web App Store">
+		<meta name="twitter:description" content="Web App Store, une application pour télécharger des templates HTML - CSS - Javascript et PHP">
+		<meta name="twitter:image" content="https://localhost:5505/assets/img/logo.svg">
+
+		<!-- Styles -->
 		<link rel="stylesheet" href="./assets/css/root.css"/>
+		<link rel="stylesheet" href="./assets/css/style.css"/>
+		
+		<link rel="image_src" href="https://localhost:5505/assets/img/logo.svg">
+		<link rel="canonical" href="https://localhost:5505">
+		<link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+		<link rel="manifest" href="./manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/d35f779ce5.js" crossorigin="anonymous"></script>
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	</head>
 
+	</head>
+	<!-- Body -->
 	<body>
+		<!-- Header -->
 		<header>
 			<nav data-aos="fade-down" data-aos-duration="1000">
 				<div class="logo">
-					<img src="./assets/img/logo.svg" alt=""/>
+					<img src="./assets/img/logo.svg" alt="Logo Web App Store"/>
 				</div>
 				<div class="box-row">
 					<ul class="list">
 						<li class="item active">
-							<a href="">Accueil</a>
+							<a href="#acceuil">Accueil</a>
 						</li>
 						<li class="item">
-							<a href="">Services</a>
+							<a href="#services">Services</a>
 						</li>
 						<li class="item">
-							<a href="">À Propos de</a>
+							<a href="#aProposDe">À Propos de</a>
 						</li>
 						<li class="item">
-							<a href="">Tarifs</a>
+							<a href="#tarifs">Tarifs</a>
 						</li>
 						<li class="item">
-							<a href="">Newsletter</a>
+							<a href="#newsletter">Newsletter</a>
 						</li>
 					</ul>
 					<div class="menu-aside">
 						<i class="fa-solid fa-bars"></i>
 					</div>
-					<a href="" class="sign"><i class="fa-solid fa-arrow-right-to-bracket"></i> S'inscrire Maintenant</a>
+					<a href="#newsletter" class="sign"><i class="fa-solid fa-arrow-right-to-bracket"></i> S'inscrire Maintenant</a>
 				</div>
 			</nav>
 		</header>
-		<aside class="aside">
-			<ul class="aside-box">
-				<li class="item active">
-					<a href="">Accueil</a>
-				</li>
-				<li class="item">
-					<a href="">Services</a>
-				</li>
-				<li class="item">
-					<a href="">À Propos de</a>
-				</li>
-				<li class="item">
-					<a href="">Tarifs</a>
-				</li>
-				<li class="item">
-					<a href="">Newsletter</a>
-				</li>
-			</ul>
-		</aside>
-		<div class="filter">
-			<section class="presentation blureffect">
-				<div class="box blureffect" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
-					<h1>Web App Store, la plateforme de modèles d'Applications</h1>
-					<p>Web App Store est une plateforme qui développe des modèles HTML CSS Javascript pour faciliter des entrepreneurs, particuliers ou entreprises de tout type de domaine à déployer leurs applications sur le web. Télécharger notre application sur l’Apple Store et le Play Store !</p>
-					<div class="button-box blureffect">
-						<a href="" class"blureffect">
-							Gratuit AppleStore
-							<i class="fa-brands fa-apple"></i>
-						</a>
-						<a href="" class="blureffect">
-							Gratuit PlayStore
-							<i class="fa-brands fa-google-play"></i>
-						</a>
+		<!-- Main -->
+		<main>
+			<aside class="aside">
+				<ul class="aside-box">
+					<li class="item active">
+						<a href="#acceuil">Accueil</a>
+					</li>
+					<li class="item">
+						<a href="#services">Services</a>
+					</li>
+					<li class="item">
+						<a href="#aProposDe">À Propos de</a>
+					</li>
+					<li class="item">
+						<a href="#tarifs">Tarifs</a>
+					</li>
+					<li class="item">
+						<a href="#newsletter">Newsletter</a>
+					</li>
+				</ul>
+			</aside>
+			<!-- Presentation -->
+			<div class="filter">
+				<section class="presentation blureffect" id="acceuil">
+					<div class="box blureffect" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000">
+						<h1>Web App Store, la plateforme de modèles d'Applications</h1>
+						<p>Web App Store est une plateforme qui développe des modèles 
+							HTML CSS Javascript pour faciliter des entrepreneurs, 
+							particuliers ou entreprises de tout type de domaine 
+							à déployer leurs applications sur le web. 
+							Télécharger notre application sur l’Apple Store et le Play Store !</p>
+						<div class="button-box blureffect">
+							<a href="#newsletter" class"blureffect">
+								Gratuit AppleStore
+								<i class="fa-brands fa-apple"></i>
+							</a>
+							<a href="#newsletter" class="blureffect">
+								Gratuit PlayStore
+								<i class="fa-brands fa-google-play"></i>
+							</a>
+						</div>
+					</div>
+				</section>
+			</div>
+			<section class="services" id="services">
+				<div class="title" data-aos="fade-down" data-aos-delay="300" data-aos-duration="500">
+					<h2><span>Services & Fonctionnalités</span> Incroyables pour Toi</h2>
+					<img src="./assets/img/heading-line-dec.png" alt=""/>
+					<p class="description">Si vous avez besoin de la plus grande collection de modèles HTML pour votre entreprise, veuillez visiter le <a href="">TooCSS Blog</a>. Si vous avez besoin d’un script PHP pour formulaire de contact, accédez à <a href="">notre page de contact</a> pour plus d’informations.</p>
+				</div>
+				<div class="services-box">
+					<div class="services-col">
+						<img src="./assets/img/service-icon-01.png" alt=""/>
+						<h3>Application  HTML/CSS</h3>
+						<p class="description">Retrouvez toutes nos applications HTML/CSS disponibles gratuitement pour certains modèles</p>
+						<div class="box-link">
+							<a href="">Lire Plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</div>
+					<div class="services-col">
+						<img src="./assets/img/service-icon-01.png" alt=""/>
+						<h3>Application  Javascript</h3>
+						<p class="description">Découvrez toutes nos applications Javascript en démonstration</p>
+						<div class="box-link">
+							<a href="">Lire Plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</div>
+					<div class="services-col">
+						<img src="./assets/img/service-icon-01.png" alt=""/>
+						<h3>Application  PHP</h3>
+						<p class="description">Retrouvez toutes nos applications PHP en démonstration</p>
+						<div class="box-link">
+							<a href="">Lire Plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</div>
+					<div class="services-col">
+						<img src="./assets/img/service-icon-01.png" alt=""/>
+						<h3>Application  Maintenance</h3>
+						<p class="description">Maintenabilité du modèle HTML/CSS/JAVASCRIPT pour une manipulation en toute sécurité</p>
+						<div class="box-link">
+							<a href="">Lire Plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</div>
+					<div class="services-col">
+						<img src="./assets/img/service-icon-02.png" alt=""/>
+						<h3>rocket speed app</h3>
+						<p class="description">Un ou plusieurs modèles complexe extrêmement rapide et déployé pour le référencement</p>
+						<div class="box-link">
+							<a href="">Lire Plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</div>
+					<div class="services-col">
+						<img src="./assets/img/service-icon-03.png" alt=""/>
+						<h3>flux de travail multiple</h3>
+						<p class="description">Possibilité de travailler sur un même modèle en réseau. </p>
+						<div class="box-link">
+							<a href="">lire plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
+					</div>
+					<div class="services-col">
+						<img src="./assets/img/service-icon-04.png" alt=""/>
+						<h3>support & aide 24h/7j</h3>
+						<p class="description">Support de communication et d’aide pour une assistance de téléchargement de nos modèles</p>
+						<div class="box-link">
+							<a href="">lire plus</a>
+							<i class="fa-solid fa-arrow-right"></i>
+						</div>
 					</div>
 				</div>
 			</section>
-		</div>
-		<section class="services">
-			<div class="title" data-aos="fade-down" data-aos-delay="300" data-aos-duration="500">
-				<h2><span>Services & Fonctionnalités</span> Incroyables pour Toi</h2>
-				<img src="./assets/img/heading-line-dec.png" alt=""/>
-				<p class="description">Si vous avez besoin de la plus grande collection de modèles HTML pour votre entreprise, veuillez visiter le <a href="">TooCSS Blog</a>. Si vous avez besoin d’un script PHP pour formulaire de contact, accédez à <a href="">notre page de contact</a> pour plus d’informations.</p>
-			</div>
-			<div class="services-box">
-				<div class="services-col">
-					<img src="./assets/img/service-icon-01.png" alt=""/>
-					<h3>Application  HTML/CSS</h3>
-					<p class="description">Retrouvez toutes nos applications HTML/CSS disponibles gratuitement pour certains modèles</p>
-					<div class="box-link">
-						<a href="">Lire Plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
+			<section class="aboutus" id="aProposDe">
+				<div class="title leftbox">
+					<h2>À propos de <span>Ce que nous faisons</span> & Qui Sommes Nous</h2>
+					<img src="./assets/img/heading-line-dec.png" alt=""/>
+					<p class="description">Pour avoir des informations complémentaires sur notre équipe et nos prochains services, vous pouvez nous contacter ici : <a href="">Contactez-Nous</a>.</p>
+				</div>
+				<div class="aboutus-boxes" data-aos="fade-down" data-aos-duration="1000">
+					<div class="aboutus-box">
+						<h3>Maintenance Problèmes</h3>
+						<p class="description">Correction de bugs, mises à jour régulières et optimisation continue garantissent des performances durables.</p>
+					</div>
+					<div class="aboutus-box">
+						<h3>Support 24h/7j</h3>
+						<p class="description">Une assistance réactive et personnalisée, pour que votre activité reste fluide en toutes circonstances.</p>
+					</div>
+					<div class="aboutus-box">
+						<h3>Résolution Problèmes</h3>
+						<p class="description">Nos solutions efficaces minimisent les interruptions et assurent une expérience utilisateur optimale.</p>
+					</div>
+					<div class="aboutus-box">
+						<h3>Evolution</h3>
+						<p class="description">Nouvelles fonctionnalités, design repensé et innovations adaptées pour rester compétitif.</p>
 					</div>
 				</div>
-				<div class="services-col">
-					<img src="./assets/img/service-icon-01.png" alt=""/>
-					<h3>Application  Javascript</h3>
-					<p class="description">Découvrez toutes nos applications Javascript en démonstration</p>
-					<div class="box-link">
-						<a href="">Lire Plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
+				<div class="note">
+					<p>Confiez-nous la gestion complète de votre site web avec un service de maintenance fiable, un support 24h/7j, une résolution rapide des problèmes et des évolutions continues.</p>
+					<a href="">Essai Gratuit de 14 JOURS !</a>
+					<p class="notabene">*Pas de carte de crédit requise</p>
 				</div>
-				<div class="services-col">
-					<img src="./assets/img/service-icon-01.png" alt=""/>
-					<h3>Application  PHP</h3>
-					<p class="description">Retrouvez toutes nos applications PHP en démonstration</p>
-					<div class="box-link">
-						<a href="">Lire Plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
+			</section>
+			<section class="clients" id="clients">
+				<div class="title">
+					<h2>Découvrez Ce Que <span>Disent Les Clients</span> À Propos De Notre Développement d'Applications</h2>
+					<img src="./assets/img/heading-line-dec.png" alt=""/>
+					<p class="description"><a href="">Découvrez comment nos solutions sur-mesure ont transformé l’activité de nos clients</a>. De la conception à la mise en ligne, nous les accompagnons avec des outils performants, innovants et adaptés à leurs besoins. Leur satisfaction est notre plus grande réussite.</p>
 				</div>
-				<div class="services-col">
-					<img src="./assets/img/service-icon-01.png" alt=""/>
-					<h3>Application  Maintenance</h3>
-					<p class="description">Maintenabilité du modèle HTML/CSS/JAVASCRIPT pour une manipulation en toute sécurité</p>
-					<div class="box-link">
-						<a href="">Lire Plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
-				</div>
-				<div class="services-col">
-					<img src="./assets/img/service-icon-02.png" alt=""/>
-					<h3>rocket speed app</h3>
-					<p class="description">Un ou plusieurs modèles complexe extrêmement rapide et déployé pour le référencement</p>
-					<div class="box-link">
-						<a href="">Lire Plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
-				</div>
-				<div class="services-col">
-					<img src="./assets/img/service-icon-03.png" alt=""/>
-					<h3>flux de travail multiple</h3>
-					<p class="description">Possibilité de travailler sur un même modèle en réseau. </p>
-					<div class="box-link">
-						<a href="">lire plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
-				</div>
-				<div class="services-col">
-					<img src="./assets/img/service-icon-04.png" alt=""/>
-					<h3>support & aide 24h/7j</h3>
-					<p class="description">Support de communication et d’aide pour une assistance de téléchargement de nos modèles</p>
-					<div class="box-link">
-						<a href="">lire plus</a>
-						<i class="fa-solid fa-arrow-right"></i>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="aboutus">
-			<div class="title leftbox">
-				<h2>À propos de <span>Ce que nous faisons</span> & Qui Sommes Nous</h2>
-				<img src="./assets/img/heading-line-dec.png" alt=""/>
-				<p class="description">Pour avoir des informations complémentaires sur notre équipe et nos prochains services, vous pouvez nous contacter ici : <a href="">Contactez-Nous</a>.</p>
-			</div>
-			<div class="aboutus-boxes" data-aos="fade-down" data-aos-duration="1000">
-				<div class="aboutus-box">
-					<h3>Maintenance Problèmes</h3>
-					<p class="description">Correction de bugs, mises à jour régulières et optimisation continue garantissent des performances durables.</p>
-				</div>
-				<div class="aboutus-box">
-					<h3>Support 24h/7j</h3>
-					<p class="description">Une assistance réactive et personnalisée, pour que votre activité reste fluide en toutes circonstances.</p>
-				</div>
-				<div class="aboutus-box">
-					<h3>Résolution Problèmes</h3>
-					<p class="description">Nos solutions efficaces minimisent les interruptions et assurent une expérience utilisateur optimale.</p>
-				</div>
-				<div class="aboutus-box">
-					<h3>Evolution</h3>
-					<p class="description">Nouvelles fonctionnalités, design repensé et innovations adaptées pour rester compétitif.</p>
-				</div>
-			</div>
-			<div class="note">
-				<p>Confiez-nous la gestion complète de votre site web avec un service de maintenance fiable, un support 24h/7j, une résolution rapide des problèmes et des évolutions continues.</p>
-				<a href="">Essai Gratuit de 14 JOURS !</a>
-				<p class="notabene">*Pas de carte de crédit requise</p>
-			</div>
-		</section>
-		<section class="clients">
-			<div class="title">
-				<h2>Découvrez Ce Que <span>Disent Les Clients</span> À Propos De Notre Développement d'Applications</h2>
-				<img src="./assets/img/heading-line-dec.png" alt=""/>
-				<p class="description"><a href="">Découvrez comment nos solutions sur-mesure ont transformé l’activité de nos clients</a>. De la conception à la mise en ligne, nous les accompagnons avec des outils performants, innovants et adaptés à leurs besoins. Leur satisfaction est notre plus grande réussite.</p>
-			</div>
-			<div class="clients-row">
-				<div class="statistics">
-					<div class="clients-statistics active index1">
-						<div class="namedate-box">
-							<h3>Lucas Bernard</h3>
-							<p>1er Novembre 2024</p>
-						</div>
-						<div class="type-clients">
-							<h4>Développeur Freelance</h4>
-						</div>
-						<div class="note-avis">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<p>4.9</p>
-						</div>
-					</div>
-					<div class="clients-statistics index2">
-						<div class="namedate-box">
-							<h3>Marion Lefebvre</h3>
-							<p>16 Novembre 2024</p>
-						</div>
-						<div class="type-clients">
-							<h4>Créatrice de Contenu Digital</h4>
-						</div>
-						<div class="note-avis">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<p>4.9</p>
-						</div>
-					</div>
-					<div class="clients-statistics index3">
-						<div class="namedate-box">
-							<h3>Thomas Girard</h3>
-							<p>5 décembre 2024</p>
-						</div>
-						<div class="type-clients">
-							<h4>Entrepreneur E-Commerce</h4>
-						</div>
-						<div class="note-avis">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<p>4.9</p>
-						</div>
-					</div>
-					<div class="clients-statistics index4">
-						<div class="namedate-box">
-							<h3>Elodie Renaud</h3>
-							<p>7 janvier 2025</p>
-						</div>
-						<div class="type-clients">
-							<h4>Graphiste Indépendante</h4>
-						</div>
-						<div class="note-avis">
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<i class="fa-solid fa-star"></i>
-							<p>4.9</p>
-						</div>
-					</div>
-				</div>
-				<div class="quote-presentation">
-					<div class="quotes">
-						<div class="quote-client visible">
-							<img src="./assets/img/quote.png" alt=""/>
-							<blockquote>Les modèles HTML/CSS/JavaScript m'ont fait gagner un temps précieux. Le code est propre et facile à personnaliser. J'ai pu livrer un projet client en un temps record !</blockquote>
-						</div>
-						<div class="quote-client">
-							<img src="./assets/img/quote.png" alt=""/>
-							<blockquote>Je n'avais aucune expérience en développement, mais grâce aux modèles proposés, j'ai pu créer un site professionnel qui reflète parfaitement mon univers.</blockquote>
-						</div>
-						<div class="quote-client">
-							<img src="./assets/img/quote.png" alt=""/>
-							<blockquote>Les templates JavaScript sont parfaitement optimisés pour l’interaction utilisateur. Mon site est plus dynamique et mes conversions ont augmenté dès les premières semaines.</blockquote>
-						</div>
-						<div class="quote-client">
-							<img src="./assets/img/quote.png" alt=""/>
-							<blockquote>La qualité des designs et la structure des modèles sont incroyables. J'ai pu intégrer mes créations graphiques sur un site fluide et moderne sans difficulté.</blockquote>
-						</div>
-					</div>
-					<div class="presentations">
-						<div class="clients-presentation">
-							<div class="client-image">
-								<img src="./assets/img/client-image.jpg" alt=""/>
-							</div>
-							<div class="client-details">
+				<div class="clients-row">
+					<div class="statistics">
+						<div class="clients-statistics active index1">
+							<div class="namedate-box">
 								<h3>Lucas Bernard</h3>
-								<dl>Développeur Freelance</dl>
+								<p>1er Novembre 2024</p>
+							</div>
+							<div class="type-clients">
+								<h4>Développeur Freelance</h4>
+							</div>
+							<div class="note-avis">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<p>4.9</p>
 							</div>
 						</div>
-						<div class="clients-presentation visible">
-							<div class="client-image">
-								<img src="./assets/img/client-image.jpg" alt=""/>
-							</div>
-							<div class="client-details">
+						<div class="clients-statistics index2">
+							<div class="namedate-box">
 								<h3>Marion Lefebvre</h3>
-								<dl>Créatrice de Contenu Digital</dl>
+								<p>16 Novembre 2024</p>
+							</div>
+							<div class="type-clients">
+								<h4>Créatrice de Contenu Digital</h4>
+							</div>
+							<div class="note-avis">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<p>4.9</p>
 							</div>
 						</div>
-						<div class="clients-presentation">
-							<div class="client-image">
-								<img src="./assets/img/client-image.jpg" alt=""/>
-							</div>
-							<div class="client-details">
+						<div class="clients-statistics index3">
+							<div class="namedate-box">
 								<h3>Thomas Girard</h3>
-								<dl>Entrepreneur E-Commerce</dl>
+								<p>5 décembre 2024</p>
+							</div>
+							<div class="type-clients">
+								<h4>Entrepreneur E-Commerce</h4>
+							</div>
+							<div class="note-avis">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<p>4.9</p>
 							</div>
 						</div>
-						<div class="clients-presentation">
-							<div class="client-image">
-								<img src="./assets/img/client-image.jpg" alt=""/>
-							</div>
-							<div class="client-details">
+						<div class="clients-statistics index4">
+							<div class="namedate-box">
 								<h3>Elodie Renaud</h3>
-								<dl>Graphiste Indépendante</dl>
+								<p>7 janvier 2025</p>
+							</div>
+							<div class="type-clients">
+								<h4>Graphiste Indépendante</h4>
+							</div>
+							<div class="note-avis">
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<i class="fa-solid fa-star"></i>
+								<p>4.9</p>
+							</div>
+						</div>
+					</div>
+					<div class="quote-presentation">
+						<div class="quotes">
+							<div class="quote-client visible">
+								<img src="./assets/img/quote.png" alt=""/>
+								<blockquote>Les modèles HTML/CSS/JavaScript m'ont fait gagner un temps précieux. Le code est propre et facile à personnaliser. J'ai pu livrer un projet client en un temps record !</blockquote>
+							</div>
+							<div class="quote-client">
+								<img src="./assets/img/quote.png" alt=""/>
+								<blockquote>Je n'avais aucune expérience en développement, mais grâce aux modèles proposés, j'ai pu créer un site professionnel qui reflète parfaitement mon univers.</blockquote>
+							</div>
+							<div class="quote-client">
+								<img src="./assets/img/quote.png" alt=""/>
+								<blockquote>Les templates JavaScript sont parfaitement optimisés pour l’interaction utilisateur. Mon site est plus dynamique et mes conversions ont augmenté dès les premières semaines.</blockquote>
+							</div>
+							<div class="quote-client">
+								<img src="./assets/img/quote.png" alt=""/>
+								<blockquote>La qualité des designs et la structure des modèles sont incroyables. J'ai pu intégrer mes créations graphiques sur un site fluide et moderne sans difficulté.</blockquote>
+							</div>
+						</div>
+						<div class="presentations">
+							<div class="clients-presentation">
+								<div class="client-image">
+									<img src="./assets/img/client-image.jpg" alt=""/>
+								</div>
+								<div class="client-details">
+									<h3>Lucas Bernard</h3>
+									<dl>Développeur Freelance</dl>
+								</div>
+							</div>
+							<div class="clients-presentation visible">
+								<div class="client-image">
+									<img src="./assets/img/client-image.jpg" alt=""/>
+								</div>
+								<div class="client-details">
+									<h3>Marion Lefebvre</h3>
+									<dl>Créatrice de Contenu Digital</dl>
+								</div>
+							</div>
+							<div class="clients-presentation">
+								<div class="client-image">
+									<img src="./assets/img/client-image.jpg" alt=""/>
+								</div>
+								<div class="client-details">
+									<h3>Thomas Girard</h3>
+									<dl>Entrepreneur E-Commerce</dl>
+								</div>
+							</div>
+							<div class="clients-presentation">
+								<div class="client-image">
+									<img src="./assets/img/client-image.jpg" alt=""/>
+								</div>
+								<div class="client-details">
+									<h3>Elodie Renaud</h3>
+									<dl>Graphiste Indépendante</dl>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<section class="prices">
-			<div class="title">
-				<h2><span>Les Meilleurs Tarifs</span> Que Vous Puissiez Avoir</h2>
-				<img src="./assets/img/heading-line-dec.png" alt=""/>
-				<p class="description"><a href="">Découvrez nos tarifs compétitifs pensés pour s’adapter à tous vos projets</a>. Profitez de prestations de qualité à des prix imbattables, sans compromis sur la performance ni sur l’innovation.</p>
-			</div>
-			<div class="row-offers">
-				<div class="col-offers2">
-					<h3>Standard Plan App</h3>
-					<p class="price">5,9€/mois</p>
-					<img src="./assets/img/pricing-table-01.png" alt="">
-					<div class="valid">
-						<p>Modèles HTML/CSS illimités</p>
-						<p>30 Modèles Javascript</p>
-					</div>
-					<div class="invalid">
-						<p>+ 20 Modèles Javascript</p>
-						<p>Intégration E-Commerce</p>
-						<p>5 Modèles PHP/MySql</p>
-					</div>
-					<a href="" class="abonnetoi">C'est Parti !</a>
+			</section>
+			<section class="prices" id="tarifs">
+				<div class="title">
+					<h2><span>Les Meilleurs Tarifs</span> Que Vous Puissiez Avoir</h2>
+					<img src="./assets/img/heading-line-dec.png" alt=""/>
+					<p class="description"><a href="">Découvrez nos tarifs compétitifs pensés pour s’adapter à tous vos projets</a>. Profitez de prestations de qualité à des prix imbattables, sans compromis sur la performance ni sur l’innovation.</p>
 				</div>
-				<div class="col-offers1">
-					<h3>Business Plan App</h3>
-					<p class="price">7,8€/mois</p>
-					<img src="./assets/img/pricing-table-01.png" alt="">
-					<div class="valid">
-						<p>ALL Standard Plan App</p>
-						<p>+ 20 Modèles Javascript</p>
-						<p>Intégration E-Commerce</p>
-						<p>5 Modèles PHP/MySql</p>
+				<div class="row-offers">
+					<div class="col-offers2">
+						<h3>Standard Plan App</h3>
+						<p class="price">5,9€/mois</p>
+						<img src="./assets/img/pricing-table-01.png" alt="">
+						<div class="valid">
+							<p>Modèles HTML/CSS illimités</p>
+							<p>30 Modèles Javascript</p>
+						</div>
+						<div class="invalid">
+							<p>+ 20 Modèles Javascript</p>
+							<p>Intégration E-Commerce</p>
+							<p>5 Modèles PHP/MySql</p>
+						</div>
+						<a href="" class="abonnetoi">C'est Parti !</a>
 					</div>
-					<div class="invalid">
-						<p>Javascript Illimités</p>
-						<p>40 Modèles PHP/MySql</p>
-						<p>Intégration SaaS</p>
+					<div class="col-offers1">
+						<h3>Business Plan App</h3>
+						<p class="price">7,8€/mois</p>
+						<img src="./assets/img/pricing-table-01.png" alt="">
+						<div class="valid">
+							<p>ALL Standard Plan App</p>
+							<p>+ 20 Modèles Javascript</p>
+							<p>Intégration E-Commerce</p>
+							<p>5 Modèles PHP/MySql</p>
+						</div>
+						<div class="invalid">
+							<p>Javascript Illimités</p>
+							<p>40 Modèles PHP/MySql</p>
+							<p>Intégration SaaS</p>
+						</div>
+						<a href="" class="abonnetoi">C'est Parti !</a>
 					</div>
-					<a href="" class="abonnetoi">C'est Parti !</a>
+					<div class="col-offers2">
+						<h3>Premium Plan App</h3>
+						<p class="price">12€/mois</p>
+						<img src="./assets/img/pricing-table-01.png" alt="">
+						<div class="valid">
+							<p>Standard et Business Plan</p>
+							<p>Javascript Illimités</p>
+							<p>40 Modèles PHP/MySql</p>
+							<p>Intégration SaaS</p>
+						</div>
+						<div class="invalid">
+							
+						</div>
+						<a href="" class="abonnetoi">C'est Parti !</a>
+					</div>
 				</div>
-				<div class="col-offers2">
-					<h3>Premium Plan App</h3>
-					<p class="price">12€/mois</p>
-					<img src="./assets/img/pricing-table-01.png" alt="">
-					<div class="valid">
-						<p>Standard et Business Plan</p>
-						<p>Javascript Illimités</p>
-						<p>40 Modèles PHP/MySql</p>
-						<p>Intégration SaaS</p>
-					</div>
-					<div class="invalid">
-						
-					</div>
-					<a href="" class="abonnetoi">C'est Parti !</a>
-				</div>
-			</div>
-		</section>
-		<footer>
+			</section>
+		</main>
+		<!-- Footer -->
+		<footer id="newsletter">
 			<div class="footer-box">
 				<h2><span>Rejoignez notre liste de diffusion</span> pour recevoir les actualités et les dernières tendances</h2>
 				<div class="title">
@@ -445,5 +502,4 @@
 			AOS.init();
 		</script>
 	</body>
-
 </html>

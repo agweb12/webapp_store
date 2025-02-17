@@ -30,3 +30,15 @@ iconMenu.addEventListener('click', function () {
         menuAside.style.right = '-200px';
     }
 });
+
+
+// validation formulaire
+function validate(form) {
+    fail = validateEmail(form.mail1.value);
+
+    if (fail == "") return true;
+    else {
+        alert(fail);
+        return false;
+    }
+}
